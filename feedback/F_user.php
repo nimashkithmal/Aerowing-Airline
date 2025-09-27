@@ -30,12 +30,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airline Reservation Feedback</title>
+    <title>Feedback - Aerowing</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo1.jpg">
+    <link rel="shortcut icon" href="../assets/images/Logo1.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/Logo1.jpg">
     <link rel="stylesheet" href="F_style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Airline Reservation Check-up Feedback</h1>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="../assets/images/Logo1.jpg" alt="Aerowing" style="max-width: 80px; height: auto;">
+            <h1>Aerowing Feedback</h1>
+        </div>
         <p>Thank you for using our Airline Reservation system! We value your feedback and would appreciate it if you could take a moment to answer the following questions.</p>
         
         <?php if (!empty($errors)): ?>

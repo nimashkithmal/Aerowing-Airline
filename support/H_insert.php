@@ -44,7 +44,10 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Support Request - Aerowing</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo1.jpg">
+    <link rel="shortcut icon" href="../assets/images/Logo1.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/Logo1.jpg">
     <link rel="stylesheet" href="H_styles.css">
     <script>
         function showMessage(message) {
@@ -54,7 +57,10 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <div class="container">
-        <h2>Support request Form</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="../assets/images/Logo1.jpg" alt="Aerowing" style="max-width: 80px; height: auto;">
+            <h2>Aerowing Support</h2>
+        </div>
         <?php 
         if(!empty($errors)){
             echo '<div class="errors"><ul>';

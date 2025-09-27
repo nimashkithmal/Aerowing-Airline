@@ -63,12 +63,18 @@ $con->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New Flight</title>
+    <title>Add New Flight - Aerowing</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo1.jpg">
+    <link rel="shortcut icon" href="../assets/images/Logo1.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/Logo1.jpg">
     <link rel="stylesheet" href="A_flight.css">
 </head>
 <body class="container">
 
-<h1>Add New Flight</h1>
+<div style="text-align: center; margin-bottom: 20px;">
+    <img src="../assets/images/Logo1.jpg" alt="Aerowing" style="max-width: 80px; height: auto;">
+    <h1>Add New Flight</h1>
+</div>
 
 <?php if (!empty($errors)): ?>
     <div class="error-message">

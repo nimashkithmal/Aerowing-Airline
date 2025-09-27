@@ -83,7 +83,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Aerowing</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo1.jpg">
+    <link rel="shortcut icon" href="../assets/images/Logo1.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/Logo1.jpg">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -157,7 +160,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="container">
-        <h2>Login</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="../assets/images/Logo1.jpg" alt="Aerowing" style="max-width: 100px; height: auto;">
+            <h2>Login to Aerowing</h2>
+        </div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div>
                 <label>Username:</label>

@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Information</title>
+    <title>User Information - Aerowing</title>
+    <link rel="icon" type="image/jpeg" href="../assets/images/Logo1.jpg">
+    <link rel="shortcut icon" href="../assets/images/Logo1.jpg">
+    <link rel="apple-touch-icon" href="../assets/images/Logo1.jpg">
     <style>
         body {
             font-family: Arial, sans-serif;
