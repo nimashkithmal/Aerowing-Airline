@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include '../config/connection.php';
 
 $errors = []; // Array to store validation errors
 

@@ -82,7 +82,7 @@
         }
 
         // Include the connection file
-        include 'connection.php';
+        include '../config/connection.php';
 
         // Get the user's information from the database based on UserID in the session
         $sql = "SELECT UserID, Username, Email, FirstName, LastName, Phone, Address FROM Users WHERE UserID = ?";
@@ -118,7 +118,7 @@
 
                         // Add the "Back to Home" button
                         echo '<div style="text-align:center; margin-top:20px;">';
-                        echo '<a href="Navigation bar.html" class="btn btn-home">Back to Home</a>'; // Assuming index.php is your home page
+                        echo '<a href="../pages/Navigation bar.html" class="btn btn-home">Back to Home</a>'; // Assuming index.php is your home page
                         echo '</div>';
                     } else {
                         echo "Error fetching user information.";

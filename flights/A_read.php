@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include '../config/connection.php';
 
 $sql = "SELECT * FROM Flights";
 $result = $con->query($sql);

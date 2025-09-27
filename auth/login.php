@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include '../config/connection.php';
 
 // Define variables and initialize with empty values
 $username = $password = "";

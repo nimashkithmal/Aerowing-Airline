@@ -1,6 +1,6 @@
 <?php
 
-   include 'connection.php';
+   include '../config/connection.php';
    $id = $_GET['updateid'];
    $sql = "select * from crud where id=$id";
    $result = mysqli_query($con,$sql);
@@ -73,7 +73,7 @@
             <button type="submit" name="submit">Update</button>
         </form>
         
- <a href="Navigation bar.html" class="btn btn-home">Back to Home</a>'; 
+ <a href="../pages/Navigation bar.html" class="btn btn-home">Back to Home</a>'; 
  
     </div>
 </body>

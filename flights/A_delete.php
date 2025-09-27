@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include '../config/connection.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $flight_id = $_POST['flight_id'];

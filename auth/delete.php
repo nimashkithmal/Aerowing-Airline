@@ -9,7 +9,7 @@ if (!isset($_SESSION["UserID"]) || empty($_SESSION["UserID"])) {
 }
 
 // Include the connection file
-include 'connection.php';
+include '../config/connection.php';
 
 // Define variable to store delete status
 $delete_status = "";

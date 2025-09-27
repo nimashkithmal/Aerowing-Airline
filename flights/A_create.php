@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-include 'connection.php'; // Include the corrected connection file
+include '../config/connection.php'; // Include the corrected connection file
 
 $errors = [];
 

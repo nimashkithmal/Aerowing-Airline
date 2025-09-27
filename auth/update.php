@@ -66,7 +66,7 @@
         }
 
         // Include the connection file
-        include 'connection.php';
+        include '../config/connection.php';
 
         // Define variables and initialize with empty values
         $username = $email = $firstname = $lastname = $phone = $address = "";
