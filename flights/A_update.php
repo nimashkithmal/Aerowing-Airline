@@ -1,6 +1,18 @@
 <?php
 include '../config/connection.php';
 
+// Fetch existing flight data when GET parameter is provided
+$existing_flight = null;
+if (isset($_GET['id'])) {
+    $flight_id = $_GET['id'];
+    $fetch_sql = "SELECT * FROM Flights WHERE flight_id = $flight_id";
+    $result = $con->query($fetch_sql);
+    
+    if ($result && $result->num_rows > 0) {
+        $existing_flight = $result->fetch_assoc();
+    }
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $flight_id = $_POST['flight_id'];
   $flight_number = $_POST['flight_number'];
@@ -21,8 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if ($con->query($sql) === TRUE) {
     echo "Flight updated successfully";
-   
-    
+    echo "<script>window.location.href='A_read.php';</script>";
   } else {
     echo "Error updating flight: " . $con->error;
   }
@@ -81,25 +92,25 @@ $con->close();
   <h1>Update Flight</h1>
   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
     <label for="flight_id">Flight ID:</label>
-    <input type="number" id="flight_id" name="flight_id" required><br>
+    <input type="number" id="flight_id" name="flight_id" value="<?php echo $existing_flight ? $existing_flight['flight_id'] : ''; ?>" required><br>
     
     <label for="flight_number">Flight Number:</label>
-    <input type="text" id="flight_number" name="flight_number" required><br>
+    <input type="text" id="flight_number" name="flight_number" value="<?php echo $existing_flight ? htmlspecialchars($existing_flight['flight_number']) : ''; ?>" required><br>
     
     <label for="departure_airport">Departure Airport:</label>
-    <input type="text" id="departure_airport" name="departure_airport" required><br>
+    <input type="text" id="departure_airport" name="departure_airport" value="<?php echo $existing_flight ? htmlspecialchars($existing_flight['departure_airport']) : ''; ?>" required><br>
     
     <label for="arrival_airport">Arrival Airport:</label>
-    <input type="text" id="arrival_airport" name="arrival_airport" required><br>
+    <input type="text" id="arrival_airport" name="arrival_airport" value="<?php echo $existing_flight ? htmlspecialchars($existing_flight['arrival_airport']) : ''; ?>" required><br>
     
     <label for="departure_time">Departure Time:</label>
-    <input type="datetime-local" id="departure_time" name="departure_time" required><br>
+    <input type="datetime-local" id="departure_time" name="departure_time" value="<?php echo $existing_flight ? date('Y-m-d\TH:i', strtotime($existing_flight['departure_time'])) : ''; ?>" required><br>
     
     <label for="arrival_time">Arrival Time:</label>
-    <input type="datetime-local" id="arrival_time" name="arrival_time" required><br>
+    <input type="datetime-local" id="arrival_time" name="arrival_time" value="<?php echo $existing_flight ? date('Y-m-d\TH:i', strtotime($existing_flight['arrival_time'])) : ''; ?>" required><br>
     
     <label for="price">Price:</label>
-    <input type="number" id="price" name="price" step="0.01" required><br>
+    <input type="number" id="price" name="price" step="0.01" value="<?php echo $existing_flight ? $existing_flight['price'] : ''; ?>" required><br>
     
     <input type="submit" value="Update Flight">
   </form>
