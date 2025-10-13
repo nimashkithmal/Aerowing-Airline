@@ -1,6 +1,6 @@
 # Aerowing Airlines - Airline Reservation System
 
-![Aerowing Airlines Homepage](https://via.placeholder.com/800x600/4A90E2/FFFFFF?text=Aerowing+Airlines+Homepage)
+![Aerowing Airlines Homepage](./Screenshot%202025-10-14%20at%2001.25.42.png)
 
 ## Overview
 
@@ -124,6 +124,6 @@ For questions or support, please contact the development team.
 
 ---
 
-**GitHub Repository**: [freshly-project2](https://github.com/swamithasara/freshly-project2.git)
+
 
 **Developed by**: Team Aerowing
